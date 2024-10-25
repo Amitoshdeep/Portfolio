@@ -27,12 +27,12 @@
 .left {
     padding-left: 4vw;
     flex: 1;
-    width: 100%; /* Ensures both columns take full width in their grid cell */
+    width: 90%; /* Ensures both columns take full width in their grid cell */
     max-width: 100%; /* Makes sure the left content stays responsive */
 }
 
 .right {
-    width: 60%;
+    width: 80%;
     flex-shrink: 0;
 }
 
@@ -43,4 +43,15 @@ iframe {
     border-radius: 30px; /* Rounds the edges */
     box-shadow: 10px 20px 15px rgba(19, 12, 119); /* Softer drop shadow */
     box-sizing: border-box;
+}
+
+img{
+    border: 5px solid rgb(19, 12, 119);
+    border-radius: 90px;
+    box-shadow: 10px 20px 15px  rgba(19, 12, 119);
+
+}
+
+ul{
+    list-style-type: none;
 }
