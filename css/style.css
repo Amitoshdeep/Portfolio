@@ -1,0 +1,62 @@
+
+body {
+    background-color: rgb(31, 20, 175);
+    display: flex;
+    flex-direction: column;
+    cursor:default;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    padding: 20px;
+    flex-grow: 1;/* Allows main content to take available space */
+}
+
+img {
+    height: 50vh;
+    /* Height is still 50% of the viewport height */
+    width: auto;
+    /* Let the width auto-adjust to maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+    /* Centers the image horizontally */
+    max-width: 100%;
+    border-radius: 50%;
+    /* Makes the image circular */
+    object-fit: cover;
+    /* Ensures the image fits well within its container */
+}
+
+section {
+    margin: 30px 0;
+    /* Adds space between sections */
+    color: white;
+    /* Ensures text is visible on dark background */
+}
+
+section h2 {
+    font-size: 26px;
+    /* Section titles */
+    margin-bottom: 10px;
+    /* Space below section title */
+}
+
+section ul {
+    list-style-type: none;
+    /* Removes bullets from project list */
+}
+
+section li {
+    margin-bottom: 15px;
+    /* Space between project items */
+}
+
+hr {
+    border: 1px solid white;
+    /* Styles the horizontal line */
+    margin: 20px 0;
+    /* Adds space around the horizontal line */
+}

@@ -1,0 +1,42 @@
+.head {
+    position: sticky;
+    background-color: rgb(25, 23, 124);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    /* Ensures title is on the left and nav is on the right */
+    align-items: center;
+    /* Centers items vertically within the header */
+    padding: 15px 20px;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+.title h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    /* Removes bullets */
+    gap: 15px;
+    /* Adds space between items */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+    font-size: 19px;
+    color: lightgray;
+    /* Changes link color on hover */
+    border-bottom: 2px solid white;
+}
