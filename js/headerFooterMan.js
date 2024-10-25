@@ -10,11 +10,11 @@ class SpecialHeader extends HTMLElement{
         <div class="navbar">
             <nav>
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/pages/about.html">About</a></li>
-                    <li><a href="/pages/projects.html">Projects</a></li>
-                    <li><a href="/pages/resume.html">Resume</a></li>
-                    <li><a href="/pages/contact.html">Contact</a></li>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/pages/about">About</a></li>
+                    <li><a href="/pages/projects">Projects</a></li>
+                    <li><a href="/pages/resume">Resume</a></li>
+                    <li><a href="/pages/contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
