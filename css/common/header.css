@@ -6,7 +6,7 @@ header {
     align-items: center; /* Centers items vertically within the header */
     padding: 15px 20px;
     position: fixed;
-    top: 0;
+    top: 0px;
     z-index: 1000;
     width: 100%; /*Ensures header spans full width*/
     box-sizing: border-box; /* Includes padding in width calculation */
@@ -38,4 +38,12 @@ header {
     color: lightgray;
     /* Changes link color on hover */
     border-bottom: 2px solid white;
+}
+
+.main{
+    padding-top: 60px;
+}
+
+body{
+    background-color: rgb(31, 20, 175);
 }
