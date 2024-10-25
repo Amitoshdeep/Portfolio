@@ -17,7 +17,7 @@ body ,html{
 }
 
 img {
-    height: 50vh;
+    height: 70vh;
     /* Height is still 50% of the viewport height */
     width: auto;
     /* Let the width auto-adjust to maintain aspect ratio */
@@ -29,6 +29,7 @@ img {
     /* Makes the image circular */
     object-fit: cover;
     /* Ensures the image fits well within its container */
+    
 }
 
 section {
