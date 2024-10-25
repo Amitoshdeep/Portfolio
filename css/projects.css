@@ -1,38 +1,39 @@
+/* Main layout for full width and centered content */
 .main {
     color: white;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single-column by default */
     gap: 20px;
-    justify-content: center; /* Centers the whole content horizontally */
+    justify-content: center;
     text-align: center;
 }
 
-.titlee{
+/* Title styling */
+.titlee {
     font-size: 90px;
+    margin: 0;
+    text-align: center;
 }
 
+/* Two-column layout for .row */
 .row {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+    grid-template-columns: 1fr 1fr; /* Two equal columns for larger screens */
     gap: 20px;
     align-items: center; /* Vertically aligns content center */
     justify-items: center; /* Horizontally centers content in grid cells */
-
 }
 
+/* Left and Right Columns */
 .left, .right {
-    
     padding: 20px;
     box-sizing: border-box;
-    text-align: center; /* Aligns text to center inside the column */
-
+    text-align: center; /* Centers text inside each section */
+    width: 100%;
 }
 
 .left {
     padding-left: 4vw;
-    flex: 1;
-    width: 90%; /* Ensures both columns take full width in their grid cell */
-    max-width: 100%; /* Makes sure the left content stays responsive */
 }
 
 .right {
@@ -40,22 +41,43 @@
     flex-shrink: 0;
 }
 
+/* Styling for iframe */
 iframe {
     width: 100%;
     background-color: black;
     border: 5px solid rgb(19, 12, 119);
-    border-radius: 30px; /* Rounds the edges */
-    box-shadow: 10px 20px 15px rgba(19, 12, 119); /* Softer drop shadow */
+    border-radius: 30px;
+    box-shadow: 10px 20px 15px rgba(19, 12, 119, 0.6); /* Softer shadow */
     box-sizing: border-box;
 }
 
-img{
+/* Styling for img */
+img {
     border: 5px solid rgb(19, 12, 119);
     border-radius: 90px;
-    box-shadow: 10px 20px 15px  rgba(19, 12, 119);
-
+    box-shadow: 10px 20px 15px rgba(19, 12, 119, 0.6);
+    max-width: 100%; /* Ensures the image scales */
+    height: auto; /* Maintains aspect ratio */
 }
 
-ul{
+/* Remove bullets from lists */
+ul {
     list-style-type: none;
+    padding: 0;
+}
+
+/* Responsive layout for mobile screens */
+@media (max-width: 786px) {
+    .row {
+        grid-template-columns: 1fr; /* Stacks columns vertically */
+    }
+
+    .titlee {
+        font-size: 60px; /* Reduces font size on smaller screens */
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+    }
 }

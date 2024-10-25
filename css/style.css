@@ -27,27 +27,27 @@
     justify-content: center;
 }
 
-/* Responsive Image */
+/* Larger Image Styling */
 img {
-    max-height: 70vh;
-    width: auto;
-    max-width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 80%; /* Increase width to make the image larger */
+    max-width: 500px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Makes image circular if dimensions allow */
 }
 
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
-    header{
-        flex-direction: column;
-    }
-
     .main {
         flex-direction: column-reverse; /* Stacks left below right on smaller screens */
     }
 
     img {
-        max-height: 40vh; /* Limit height on smaller screens */
-        width: 100%;
+        width: 100%; /* Image takes full width of container on mobile */
+        max-width: 600px; /* Larger max width for mobile view */
+        height: auto; /* Maintains aspect ratio */
+    }
+
+    header{
+        flex-direction: column;
     }
 }
