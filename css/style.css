@@ -1,64 +1,53 @@
-
-body ,html{
-    background-color: rgb(31, 20, 175);
-    display: flex;
-    flex-direction: column;
-    cursor:default;
-    overflow-x: hidden; 
-}
-
+/* Main layout adjustments */
 .main {
-    height: 100vh;
     display: flex;
+    flex-direction: row; /* Default to side-by-side layout */
     justify-content: space-between;
-    /* flex-wrap: wrap; */
     padding: 20px;
-    flex-grow: 1;/* Allows main content to take available space */
+    gap: 20px; /* Adds space between .left and .right divs */
+    flex-grow: 1;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the main content */
 }
 
+/* Left and Right Div Sizes */
+.left, .right {
+    flex: 1; /* Allow both divs to take equal space */
+    min-width: 0; /* Prevent overflow */
+}
+
+.left {
+    padding-right: 10px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Image */
 img {
-    height: 70vh;
-    /* Height is still 50% of the viewport height */
+    max-height: 70vh;
     width: auto;
-    /* Let the width auto-adjust to maintain aspect ratio */
-    display: block;
-    margin: 0 auto;
-    /* Centers the image horizontally */
     max-width: 100%;
     border-radius: 50%;
-    /* Makes the image circular */
     object-fit: cover;
-    /* Ensures the image fits well within its container */
-    
 }
 
-section {
-    margin: 30px 0;
-    /* Adds space between sections */
-    color: white;
-    /* Ensures text is visible on dark background */
-}
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    header{
+        flex-direction: column;
+    }
 
-section h2 {
-    font-size: 26px;
-    /* Section titles */
-    margin-bottom: 10px;
-    /* Space below section title */
-}
+    .main {
+        flex-direction: column-reverse; /* Stacks left below right on smaller screens */
+    }
 
-section ul {
-    list-style-type: none;
-    /* Removes bullets from project list */
-}
-
-section li {
-    margin-bottom: 15px;
-    /* Space between project items */
-}
-
-hr {
-    border: 1px solid white;
-    /* Styles the horizontal line */
-    margin: 20px 0;
-    /* Adds space around the horizontal line */
+    img {
+        max-height: 40vh; /* Limit height on smaller screens */
+        width: 100%;
+    }
 }
