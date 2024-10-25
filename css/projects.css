@@ -1,26 +1,46 @@
-.main{
+.main {
     color: white;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.left , .right {
-    
-    /* height: 100vh; */
-    width: 48%;
-    justify-content: space-between;
-    padding: 20px;
-    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-content: center; /* Centers the whole content horizontally */
     text-align: center;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+    gap: 20px;
+    align-items: center; /* Vertically aligns content center */
+    justify-items: center; /* Horizontally centers content in grid cells */
 
 }
 
-iframe{
-    /* height: 100; */
-    background-color: black;
-    border: 4px solid rgb(19, 12, 119);
-    border-radius: 30px; /*round the edges */
-    box-shadow: 10px 20px 15px rgb(19, 12, 119); /* drop shadow */;
-    box-sizing: border-box;
+.left, .right {
     
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; /* Aligns text to center inside the column */
+
+}
+
+.left {
+    padding-left: 4vw;
+    flex: 1;
+    width: 100%; /* Ensures both columns take full width in their grid cell */
+    max-width: 100%; /* Makes sure the left content stays responsive */
+}
+
+.right {
+    width: 60%;
+    flex-shrink: 0;
+}
+
+iframe {
+    width: 100%;
+    background-color: black;
+    border: 5px solid rgb(19, 12, 119);
+    border-radius: 30px; /* Rounds the edges */
+    box-shadow: 10px 20px 15px rgba(19, 12, 119); /* Softer drop shadow */
+    box-sizing: border-box;
 }
