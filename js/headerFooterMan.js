@@ -2,7 +2,7 @@ class SpecialHeader extends HTMLElement{
     connectedCallback(){
         this.innerHTML= `
         <header>
-        <div class= "head " >
+        
         <div class="title">
             <h1>Amitoshdeep's Portfolio</h1>
         </div>
@@ -18,7 +18,7 @@ class SpecialHeader extends HTMLElement{
                 </ul>
             </nav>
         </div>
-        </div>
+        
         </header>
     `
     }

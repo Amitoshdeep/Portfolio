@@ -1,0 +1,41 @@
+header {
+    background-color: rgb(25, 23, 124);
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Title on the left, nav on the right */
+    align-items: center; /* Centers items vertically within the header */
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /*Ensures header spans full width*/
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.title h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    /* Removes bullets */
+    gap: 15px;
+    /* Adds space between items */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+    font-size: 19px;
+    color: lightgray;
+    /* Changes link color on hover */
+    border-bottom: 2px solid white;
+}
