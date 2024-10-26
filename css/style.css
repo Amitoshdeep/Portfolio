@@ -13,11 +13,15 @@
 
 /* Left and Right Div Sizes */
 .left, .right {
+    width: 80%;
     flex: 1; /* Allow both divs to take equal space */
-    min-width: 0; /* Prevent overflow */
+    min-width: 0; /*Prevent overflow*/
 }
 
 .left {
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
     padding-right: 10px;
 }
 
@@ -25,29 +29,42 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* Larger Image Styling */
 img {
-    width: 80%; /* Increase width to make the image larger */
-    max-width: 500px; /* Limit maximum width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Makes image circular if dimensions allow */
+    width: auto;
+    /* max-width: 1300px; Limit maximum width */
+    height: 50vh; /* Maintain aspect ratio */
+    /* border-radius: 50%; Makes image circular if dimensions allow */
 }
 
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     .main {
         flex-direction: column-reverse; /* Stacks left below right on smaller screens */
+        align-items: center;
+        width: 100%;
     }
+
+    .left, .right {
+        text-align: center;
+        flex: none; /* Remove flex sizing on mobile */
+        width: 100%; /* Apply 90% width */
+        margin: 0 0;
+    }
+
 
     img {
         width: 100%; /* Image takes full width of container on mobile */
         max-width: 600px; /* Larger max width for mobile view */
         height: auto; /* Maintains aspect ratio */
+        border-radius: 0;
     }
 
-    header{
+    header {
         flex-direction: column;
     }
 }
