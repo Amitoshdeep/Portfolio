@@ -80,4 +80,14 @@ ul {
         display: flex;
         flex-direction: column;
     }
+
+    .main{
+        margin-top: 100px;
+    }
+
+    .left,.right{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
 }

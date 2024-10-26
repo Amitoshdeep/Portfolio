@@ -5,11 +5,13 @@
     justify-content: space-between;
     padding: 20px;
     gap: 20px; /* Adds space between .left and .right divs */
-    flex-grow: 1;
-    box-sizing: border-box;
     max-width: 1200px;
     margin: 0 auto; /* Centers the main content */
+    box-sizing: border-box;
+    /* flex-grow: 1; */
 }
+
+
 
 /* Left and Right Div Sizes */
 .left, .right {
@@ -42,29 +44,42 @@ img {
 }
 
 /* Responsive adjustments for mobile */
-@media (max-width: 768px) {
+@media (max-width: 786px) {
     .main {
-        flex-direction: column-reverse; /* Stacks left below right on smaller screens */
+        flex-direction: column-reverse; /* Stack layout for mobile */
         align-items: center;
-        width: 100%;
+        /* width: 100vw; Full viewport width */
+        margin: 0; /* Remove any side margin */
+        padding: 0; /* Remove padding */
     }
 
     .left, .right {
         text-align: center;
-        flex: none; /* Remove flex sizing on mobile */
-        width: 100%; /* Apply 90% width */
-        margin: 0 0;
+        width: 100%; /* Full width for columns */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
     }
 
-
+    .left{
+        margin: 0%;
+        width: 150vw;
+        
+    }
     img {
-        width: 100%; /* Image takes full width of container on mobile */
-        max-width: 600px; /* Larger max width for mobile view */
-        height: auto; /* Maintains aspect ratio */
-        border-radius: 0;
+        width: 160vw; /* Full width for mobile */
+        max-width: 250%; /* Ensures image scales within the container */
+        height: auto;
+        border-radius: 0; /* Removes circular shape on mobile */
+    }
+
+    .titlee {
+        font-size: 60px; /* Adjust font size for mobile */
+        text-align: center;
     }
 
     header {
         flex-direction: column;
+        width: 100%; /* Full width for header */
+        text-align: center;
     }
 }
