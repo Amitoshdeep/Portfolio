@@ -47,6 +47,12 @@ header {
     padding-top: 60px;
 }
 
+.left {
+    max-width: 1200px; /* Set max width for wider content */
+    margin: 0 auto; /* Center align within the page */
+    padding: 20px; /* Add padding for spacing */
+}
+
 body{
     background-color: rgb(31, 20, 175);
 }
@@ -93,5 +99,9 @@ nav ul li:hover{
 
     .left ,.right {
         text-align: left;
+    }
+    .left {
+        padding: 0px;
+        width: 100%; /* Full width on mobile */
     }
 }
