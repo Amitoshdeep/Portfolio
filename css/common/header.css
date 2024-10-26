@@ -6,9 +6,8 @@ header {
     padding: 20px;
     background-color: #1a1a82;
     color: white;
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 96vw;
 }
 
 .logo h1 {
