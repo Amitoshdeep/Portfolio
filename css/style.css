@@ -81,9 +81,4 @@ body {
         text-align: center;
     }
 
-    header {
-        flex-direction: column;
-        width: 100%; /* Full width for header */
-        text-align: center;
-    }
 }
