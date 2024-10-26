@@ -90,4 +90,8 @@ nav ul li:hover{
         display: flex; /* Show nav links when active */
         
     }
+
+    .left ,.right {
+        text-align: left;
+    }
 }
