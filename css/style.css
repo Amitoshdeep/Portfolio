@@ -8,21 +8,20 @@
     max-width: 1200px;
     margin: 0 auto; /* Centers the main content */
     box-sizing: border-box;
+    overflow-x: hidden; /* Prevents overflow */
     /* flex-grow: 1; */
 }
-
-
 
 /* Left and Right Div Sizes */
 .left, .right {
     width: 80%;
     flex: 1; /* Allow both divs to take equal space */
-    min-width: 0; /*Prevent overflow*/
+    min-width: 0; /* Prevent overflow */
 }
 
 .left {
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     align-items: center;
     padding-right: 10px;
 }
@@ -31,24 +30,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
 /* Larger Image Styling */
 img {
     width: auto;
-    /* max-width: 1300px; Limit maximum width */
     height: 50vh; /* Maintain aspect ratio */
     /* border-radius: 50%; Makes image circular if dimensions allow */
 }
+
+/* Remove horizontal scroll */
+body {
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
 
 /* Responsive adjustments for mobile */
 @media (max-width: 786px) {
     .main {
         flex-direction: column-reverse; /* Stack layout for mobile */
         align-items: center;
-        /* width: 100vw; Full viewport width */
+        width: 100%; /* Ensure full width */
         margin: 0; /* Remove any side margin */
         padding: 0; /* Remove padding */
     }
@@ -60,14 +64,14 @@ img {
         margin: 0; /* Remove margin */
     }
 
-    .left{
-        margin: 0%;
-        width: 150vw;
-        
+    .left {
+        width: 100%; /* Prevent extra width on mobile */
+        margin: 0;
     }
+
     img {
-        width: 160vw; /* Full width for mobile */
-        max-width: 250%; /* Ensures image scales within the container */
+        width: 150vw; /* Full width for mobile */
+        max-width: 500%; /* Ensures image scales within the container */
         height: auto;
         border-radius: 0; /* Removes circular shape on mobile */
     }

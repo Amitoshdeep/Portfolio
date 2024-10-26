@@ -2,24 +2,24 @@ class SpecialHeader extends HTMLElement{
     connectedCallback(){
         this.innerHTML= `
         <header>
-        
-        <div class="title">
+        <div class="logo">
             <h1>Amitoshdeep's Portfolio</h1>
         </div>
-
-        <div class="navbar">
-            <nav>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/pages/about.html">About</a></li>
-                    <li><a href="/pages/projects.html">Projects</a></li>
-                    <li><a href="/pages/resume.html">Resume</a></li>
-                    <li><a href="/pages/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        
-        </header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="/pages/projects.html">Projects</a></li>
+                <li><a href="/pages/resume.html">Resume</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
     `
     }
 }
@@ -60,7 +60,6 @@ class SpecialFooter extends HTMLElement{
             <p>&copy; 2024 Amitoshdeep Singh. All rights reserved. | <a href="mailto:amitosh1999@gmail.com">Contact Me</a></p>
         </div>
     </div>
-    
         `
     }
 }

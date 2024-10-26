@@ -6,7 +6,5 @@
 }
 
 @media (max-width: 786px){
-    header{
-        flex-direction: column;
-    }
+    
 }

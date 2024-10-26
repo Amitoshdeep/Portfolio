@@ -1,44 +1,47 @@
+/* Header Styling */
 header {
-    background-color: rgb(25, 23, 124);
-    color: white;
     display: flex;
-    justify-content: space-between; /* Title on the left, nav on the right */
-    align-items: center; /* Centers items vertically within the header */
-    padding: 15px 20px;
-    position: fixed;
-    top: 0px;
-    z-index: 1000;
-    width: 100%; /*Ensures header spans full width*/
-    box-sizing: border-box; /* Includes padding in width calculation */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a82;
+    color: white;
 }
 
-.title h1 {
-    font-size: 24px;
+.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.navbar ul {
-    display: flex;
-    list-style-type: none;
-    /* Removes bullets */
-    gap: 15px;
-    /* Adds space between items */
+/* Hamburger Icon Styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: white;
-    padding: 5px 10px;
-    transition: color 0.3s;
-    /* Smooth transition for hover effect */
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
 }
 
-.navbar a:hover {
-    font-size: 19px;
-    color: lightgray;
-    /* Changes link color on hover */
-    border-bottom: 2px solid white;
-}
 
 .main{
     padding-top: 60px;
@@ -46,4 +49,45 @@ header {
 
 body{
     background-color: rgb(31, 20, 175);
+}
+
+
+nav ul li:hover{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+/* Mobile View */
+@media (max-width: 786px) {
+    header{
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust according to header height */
+        right: 20px;
+        background-color: #1a1a82;
+        border-radius: 8px;
+        width: 200px;
+        padding: 10px;
+        text-align: right;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+        
+    }
+
+    .navbar.active .nav-links {
+        display: flex; /* Show nav links when active */
+        
+    }
 }
