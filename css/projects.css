@@ -57,8 +57,13 @@ img {
     border-radius: 20px;
     box-shadow: 10px 20px 15px rgba(19, 12, 119, 0.6);
     max-width: 100%; /* Ensures the image scales */
-    /* width: auto; */
-    /*height: auto; /* Maintains aspect ratio */
+    width: auto;
+    height: auto; /* Maintains aspect ratio */
+}
+
+.tic{
+    width: auto;
+    height: 40vh;
 }
 
 /* Remove bullets from lists */
