@@ -37,10 +37,10 @@ class SpecialFooter extends HTMLElement{
                         <p>A project designed to help users track their mental health.</p>
                         <a href="/pages/projects.html#mediT">View Project</a>
                     </li>
-                    <li>
+                    <li><br>
                         <h3>Raspberry Pi Pico 2 USB Keyboard Emulation Project</h3>
                         <p>An project design to auto-mate your task :D</p>
-                        <a href="/pages/projects.html#pico" >View Project</a>
+                        <a href="/pages/projects.html#pico" >View Project</a><br>
                     </li>
                 </ul>
             </section>

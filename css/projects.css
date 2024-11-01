@@ -57,7 +57,8 @@ img {
     border-radius: 20px;
     box-shadow: 10px 20px 15px rgba(19, 12, 119, 0.6);
     max-width: 100%; /* Ensures the image scales */
-    height: auto; /* Maintains aspect ratio */
+    /* width: auto; */
+    /*height: auto; /* Maintains aspect ratio */
 }
 
 /* Remove bullets from lists */
@@ -83,6 +84,10 @@ ul {
     .left,.right{
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    img {
+        height: auto;
     }
 
 }

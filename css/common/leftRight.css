@@ -37,10 +37,11 @@
 
 @media(max-width: 786px){
     .left {
-        margin-left: 5vw;
+        text-align: center;
+        margin-left: 2.5vw;
         display: flex;
         flex-direction: column;
-        width: 98vw;
-        padding: 0%;
+        width: 90vw;
+        margin-right: 4vw;
     }
 }
