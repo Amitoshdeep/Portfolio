@@ -38,9 +38,9 @@ class SpecialFooter extends HTMLElement{
                         <a href="/pages/projects.html#mediT">View Project</a>
                     </li>
                     <li>
-                        <h3>Tic-Tac-Toe Game</h3>
-                        <p>An interactive Java game where users can play Tic-Tac-Toe.</p>
-                        <a href="/pages/projects.html#Tictac" >View Project</a>
+                        <h3>Raspberry Pi Pico 2 USB Keyboard Emulation Project</h3>
+                        <p>An project design to auto-mate your task :D</p>
+                        <a href="/pages/projects.html#pico" >View Project</a>
                     </li>
                 </ul>
             </section>
