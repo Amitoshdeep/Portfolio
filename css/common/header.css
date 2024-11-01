@@ -100,11 +100,12 @@ nav ul li:hover{
         
     }
 
-    .left ,.right {
+    /* .left ,.right {
         text-align: left;
     }
     .left {
         padding: 0px;
-        width: 100%; /* Full width on mobile */
+        width: 90vw; /* Full width on mobile 
     }
+     */
 }

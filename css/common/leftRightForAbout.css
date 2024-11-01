@@ -33,3 +33,12 @@
     padding: 20px;
     /* text-align: center; */
 }
+
+
+@media(max-width: 786px){
+    .left , .right{
+        text-align: center;
+        width: 90vw;
+        padding: 0%;
+    }
+}

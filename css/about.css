@@ -8,7 +8,7 @@ body , html{
 }
 
 .main{
-    height: auto;
+    /* height: auto; */
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
@@ -17,9 +17,5 @@ body , html{
     /* background-color: rebeccapurple; */
     text-align: center;
     align-items: center;
-    
-}
-
-@media(max-width: 786px){
     
 }

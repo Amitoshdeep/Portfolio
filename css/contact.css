@@ -1,10 +1,40 @@
 .main{
+    cursor: default;
     display: flex;
     justify-content: space-between;
-    margin: 15vh 0;
     text-align: center;
+    height: max-content;
+}
+
+.left a{
+    text-decoration: none;
+    color: rgb(196, 188, 188);
+}
+
+.right a{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.right ul li{
+    text-align: center;
+    background-color: rebeccapurple;
+    /* width: 300px; */
+    height: 7cap;
+    list-style-type: none;
+}
+
+.right ul li:hover{
+    text-decoration: underline;
+    font-size: 20px;
 }
 
 @media (max-width: 786px){
-    
+    .main{
+        flex-direction: column;
+    }
+    .left ,.right{
+        width: 90vw;
+    }
 }
