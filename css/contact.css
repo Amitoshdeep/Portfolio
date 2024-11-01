@@ -67,4 +67,7 @@
     .left ,.right{
         width: 90vw;
     }
+    .cont{
+        font-size: 15vw;
+    }
 }
