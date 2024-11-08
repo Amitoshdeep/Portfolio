@@ -17,6 +17,8 @@
     font-family: 'Arial', sans-serif; /* Optional: change font for a modern look */
     font-weight: bold;
     text-transform: uppercase; /* Optional: makes title more dynamic */
+    word-wrap: break-word; /* Ensures long words break to the next line */
+    overflow-wrap: break-word; /* Prevents overflow for long words */
 }
 
 /* Container for cards */
@@ -38,6 +40,8 @@
     border-radius: 20px; /* Optional: rounded corners for the cards */
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Softer shadow for cards */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    word-wrap: break-word; /* Ensures text wraps within the card */
+    overflow-wrap: break-word; /* Prevents overflow in text */
 }
 
 /* Card hover effect */
@@ -56,7 +60,7 @@
     display: block;
 }
 
-iframe{
+iframe {
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -73,7 +77,7 @@ ul {
 }
 
 /* Responsive layout for mobile screens */
-@media (max-width: 786px) {
+@media (max-width: 1391px) {
     .titlee {
         font-size: 60px; /* Reduces font size on smaller screens */
     }
@@ -89,12 +93,23 @@ ul {
 
     .cards {
         width: 90%; /* Makes the cards take more space on smaller screens */
-        height: auto; /* Adjusts height for flexibility */
+        height: 100%; /* Adjusts height for flexibility */
         margin: 10px 0;
+        text-overflow: ellipsis; /* Cuts off text overflow with ellipsis */
         text-align: left;
+        word-wrap: break-word; /* Prevents text from overflowing the card */
+        overflow-wrap: break-word; /* Prevents long words from spilling out */
+        max-height: 800px;
     }
 
-    iframe{
-        height: 300px;
+    .cards img{
+        max-width: 99%;
+        max-height: 600px;
+        padding: 0 0 0 5px;
+    }
+
+    iframe {
+        height: 80vh;
+        max-height: 500px;
     }
 }
