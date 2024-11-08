@@ -88,9 +88,10 @@ ul {
     }
 
     .cards {
-        width: 80%; /* Makes the cards take more space on smaller screens */
+        width: 90%; /* Makes the cards take more space on smaller screens */
         height: auto; /* Adjusts height for flexibility */
         margin: 10px 0;
+        text-align: left;
     }
 
     iframe{
