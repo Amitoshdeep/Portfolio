@@ -1,11 +1,12 @@
 /* Main layout for full width and centered content */
 .main {
     color: white;
-    display: grid;
-    grid-template-columns: 1fr; /* Single-column by default */
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 20px; /* Added padding for spacing */
 }
 
 /* Title styling */
@@ -13,86 +14,86 @@
     font-size: 90px;
     margin: 0;
     text-align: center;
+    font-family: 'Arial', sans-serif; /* Optional: change font for a modern look */
+    font-weight: bold;
+    text-transform: uppercase; /* Optional: makes title more dynamic */
 }
 
-/* Two-column layout for .row */
-.row {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns for larger screens */
-    gap: 20px;
-    align-items: center; /* Vertically aligns content center */
-    justify-items: center; /* Horizontally centers content in grid cells */
+/* Container for cards */
+.container {
+    max-width: 1500px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between the cards */
 }
 
-/* Left and Right Columns */
-.left, .right {
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center; /* Centers text inside each section */
+/* Card styling */
+.cards {
+    width: 44%;
+    height: 430px;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    border-radius: 20px; /* Optional: rounded corners for the cards */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Softer shadow for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Card hover effect */
+.cards:hover {
+    transform: translateY(-10px); /* Slightly lifts the card */
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.5); /* Enhances shadow on hover */
+}
+
+/* Image inside cards */
+.cards img {
     width: 100%;
-}
-
-.left {
-    padding-left: 4vw;
-}
-
-.right {
-    width: 80%;
-    flex-shrink: 0;
-}
-
-/* Styling for iframe */
-iframe {
-    width: 100%;
-    background-color: black;
-    border: 5px solid rgb(19, 12, 119);
-    border-radius: 30px;
-    box-shadow: 10px 20px 15px rgba(19, 12, 119, 0.6); /* Softer shadow */
-    box-sizing: border-box;
-}
-
-/* Styling for img */
-img {
-    border: 5px solid rgb(19, 12, 119);
+    height: 100%;
     border-radius: 20px;
-    box-shadow: 10px 20px 15px rgba(19, 12, 119, 0.6);
-    max-width: 100%; /* Ensures the image scales */
-    width: auto;
-    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures image covers area without stretching */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Softer shadow for images */
+    display: block;
 }
 
-.tic{
-    width: auto;
-    height: 40vh;
+iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover; /* Ensures image covers area without stretching */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Softer shadow for images */
+    display: block;
 }
 
 /* Remove bullets from lists */
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 /* Responsive layout for mobile screens */
 @media (max-width: 786px) {
-    .row {
-        grid-template-columns: 1fr; /* Stacks columns vertically */
-    }
-
     .titlee {
         font-size: 60px; /* Reduces font size on smaller screens */
     }
 
-    .main{
-        margin-top: 100px;
+    .main {
+        margin-top: 50px; /* Adjust top margin for better alignment */
     }
 
-    .left,.right{
-        margin-top: 0;
-        margin-bottom: 0;
+    .container {
+        flex-direction: column; /* Stacks cards vertically on small screens */
+        align-items: center; /* Centers cards */
     }
 
-    .tic {
-        height: auto;
+    .cards {
+        width: 80%; /* Makes the cards take more space on smaller screens */
+        height: auto; /* Adjusts height for flexibility */
+        margin: 10px 0;
     }
 
+    iframe{
+        height: 300px;
+    }
 }
