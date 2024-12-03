@@ -1,0 +1,16 @@
+.main{
+    display: flex;
+    flex-direction: row; /* Default to side-by-side layout */
+    justify-content: space-between;
+    /* padding: 20px; */
+    gap: 20px; /* Adds space between .left and .right divs */
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden; /* Prevents overflow */
+}
+
+@media(max-width: 820px){
+    .main{
+        flex-direction: column;
+    }
+}

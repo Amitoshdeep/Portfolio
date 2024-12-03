@@ -1,0 +1,44 @@
+.left,
+.right {
+    width: 70%;
+    color: white;
+    margin: 0vh 0;
+}
+
+.left {
+    margin: 10vh 0;
+    color: white;
+    padding: 20px;
+}
+
+.left h1 {
+    font-size: 36px;
+    /* Adjust header size for better prominence */
+}
+
+.left h2 {
+    font-size: 28px;
+    /* Section header size */
+    margin: 15px 0;
+    /* Spacing below section header */
+}
+
+.left p {
+    font-size: 18px;
+    line-height: 1.6;
+    /* Improves readability */
+}
+
+.right {
+    padding: 20px;
+    /* text-align: center; */
+}
+
+
+@media(max-width: 786px){
+    .left , .right{
+        text-align: center;
+        width: 90vw;
+        padding: 0%;
+    }
+}

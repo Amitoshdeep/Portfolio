@@ -1,0 +1,51 @@
+.left,
+.right {
+    width: 48%;
+    color: #333333;
+    /* margin: 15vh 0; */
+    padding: 20px;
+    cursor: default;
+}
+
+.left h1 {
+    font-size: 36px;
+    /* Adjust header size for better prominence */
+}
+
+.left h2 {
+    font-size: 28px;
+    /* Section header size */
+    margin: 0 0 20px 0;
+    /* Spacing below section header */
+}
+
+.left p {
+    font-size: 18px;
+    line-height: 1.6;
+    /* Improves readability */
+}
+
+.right {
+    padding: 20px;
+    /* text-align: center; */
+}
+
+
+@media(max-width: 820px){
+
+    .left {
+        text-align: center;
+        margin-left: 2.5vw;
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        margin-right: 4vw;
+    }
+
+    .left, .right {
+        text-align: center;
+        width: 90vw; /* Full width for columns */
+        padding: 2%; /* Remove exess padding */
+        margin: 2%; /* Remove exess margin */
+    }
+}
