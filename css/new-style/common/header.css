@@ -10,6 +10,10 @@ header{
     z-index: 1000;
 }
 
+header h1{
+    font-size: 25px;
+}
+
 /* Nav BAR */
 .nav-links{
     display: flex;
