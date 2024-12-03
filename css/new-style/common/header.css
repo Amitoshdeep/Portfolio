@@ -66,10 +66,10 @@ nav ul li:hover{
         flex-direction: column;
         position: absolute;
         top: 70px;
-        right: 40px;
+        right: 20px;
         background-color: #4A90E2;
         border-radius: 8px;
-        width: 100px;
+        width: 140px;
         padding: 20px;
         text-align: right;
     }
