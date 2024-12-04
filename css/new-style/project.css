@@ -62,4 +62,10 @@ ul{
     .cards{
         width: 90%;
     }
+
+    .cards:nth-child(even){
+        min-height: 150px;
+        width: auto;
+        /* background-color: rebeccapurple; */
+    }
 }
