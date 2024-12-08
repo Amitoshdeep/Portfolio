@@ -64,8 +64,9 @@ ul{
     }
 
     .cards:nth-child(even){
-        min-height: 150px;
+        min-height: 250px;
         width: auto;
+        max-width: 80%;
         /* background-color: rebeccapurple; */
     }
 }
