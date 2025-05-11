@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
       side.classList.remove('hidden');
 
       // Change nav image to "close" icon
-      navImg.src = '/assets/icons/close.svg';
+      navImg.src = './assets/icons/close.svg';
     } else {
     //   console.log('Sidebar is visible');
       side.classList.add('hidden');
 
       // Change nav image to "menu" icon
-      navImg.src = '/assets/icons/menu.svg';
+      navImg.src = './assets/icons/menu.svg';
     }
   });
 });
