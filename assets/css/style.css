@@ -1,0 +1,306 @@
+@import "tailwindcss";
+
+@theme{
+    --font-outfit: "Outfit", "sans-serif"; 
+    --color-offBlack: #212121;
+    --color-blackOP: #00000080;
+    --color-grayy: #999999;
+    --color-offGrayy: #99999980;
+    --color-orangee: #f59e0b;
+    --color-offOrangee: #f59e0b40;
+    --color-offWhite: #fafafa;
+    --color-extraOffWhite: #c3c3c3;
+    --color-forCardz: #141414;
+    --color-forCardzHover: #99999940;
+    --text-30: 30px;
+
+    --breakpoint-ss: 520px;
+    --breakpoint-small: 575px;
+    --breakpoint-medium: 768px;      
+    --breakpoint-large: 1000px;  
+    --breakpoint-largeS: 1440px;  
+}
+
+@layer components {
+    .underline-span {
+      @apply relative overflow-hidden;
+    }
+  
+    .underline-span::after {
+        @apply content-[''] absolute bottom-[-5px] left-0 h-[2px] w-[96%] bg-amber-500 ;
+    }
+
+    /* =============================================== */
+    .under{
+        @apply relative;
+    }
+
+    .under::after{
+        @apply content-[''] absolute bottom-[-5px] left-0 h-[2px] w-1/2 bg-amber-500 duration-700; 
+    }
+
+    .front-line{
+        @apply relative;
+    }
+
+    .front-line::after{
+        @apply content-[''] absolute h-[1px] w-30 bg-amber-500 top-1/2;
+    }
+
+    .aabout .front-line::after{
+        @apply left-14;
+    }
+
+    .askils .front-line::after{
+        @apply left-14;
+    }
+
+    .techInt .front-line::after{
+        @apply left-[120px];
+    }
+
+    .Int .front-line::after{
+        @apply left-[75px];
+    }
+
+    .rr .front-line::after{
+        @apply left-[65px];
+    }
+
+    .cc .front-line::after{
+        @apply left-[75px];
+    }
+
+    .msg .front-line::after{
+        @apply left-[75px];
+    }
+
+    /*==================================================================  */
+    .back{
+        @apply relative;
+    }
+
+    .back::before{
+        @apply content-[''] absolute bg-black w-[5000px] left-[-200px] top-0 h-[70px] z-[2];
+    }
+
+}
+
+*:not(.overlay){
+    @apply z-10;
+}
+
+.logo{
+    @apply text-orangee bg-offBlack p-2.5 rounded-full text-xl flex self-center justify-self-center cursor-pointer hover:bg-offOrangee duration-700;
+}
+
+
+/* ==================================================================== */
+.graadd{
+    @apply text-orangee;
+}
+
+.graad{
+    @apply font-extrabold text-orangee uppercase;
+}
+
+
+.graadd:not(.aleft > .graadd:nth-child(1)){
+    @apply font-extrabold bg-gradient-to-r from-amber-500 via-gray-300 to-amber-500 bg-clip-text text-transparent;
+}
+
+.alist li{
+    @apply relative flex-1 min-w-[45%] ml-5 mb-5;
+}
+
+.alist li i{
+    @apply absolute left-[-20px] text-sm top-[60%] translate-y-[-50%] text-amber-500;
+}
+
+/* ==================================================================== */
+
+.sbars{
+    @apply min-w-[100%] flex-wrap flex justify-between h-16 medium:p-3 large:min-w-[50%];
+}
+
+.sbars p {
+    @apply min-w-[45%] flex-1 font-extrabold text-sm text-grayy large:min-w-[45%];
+}
+
+.sbars p:nth-child(2){
+    @apply text-right;
+}
+
+.br{
+    @apply w-full h-2  bg-gray-600 relative;
+}
+
+.pr {
+    @apply absolute top-0 left-0 h-full bg-amber-500 transition-all duration-300;
+  }
+  
+/* ========================================================== */
+
+.tCon{
+    @apply flex items-center gap-4 medium:gap-8 flex-wrap;
+}
+
+.tCrds{
+    @apply h-10 flex gap-1 items-center justify-center text-sm text-grayy p-2 bg-forCardz rounded-xl shadow-[0px_0px_2px_rgba(255,251,235,0.5)] duration-700 cursor-default;
+}
+
+.tCrds img {
+    @apply object-contain h-full;
+}
+
+.tCrds i{
+    @apply flex justify-self-center text-orangee;
+}
+
+.tCrds:hover:has(i){
+    @apply cursor-pointer;
+}
+
+.tCrds:hover{
+    @apply bg-forCardzHover;
+}
+
+/* =================================== */
+
+.iCrdz{
+    @apply h-16 min-w-[100%] bg-forCardz flex gap-4 items-center p-4 rounded-2xl shadow-[0px_0px_2px_rgba(255,251,235,0.8)] cursor-default medium:min-w-[calc(100%/2.2)] large:min-w-[calc(100%/3.33)] largeS:min-w-[calc(100%/4.4)];
+}
+
+.iCrdz p{
+    @apply text-xl;
+}
+
+.iCrdz i{
+    @apply flex justify-self-center text-lg;
+}
+
+.iCrdz:nth-child(1) i{
+    @apply text-[#fab82a];
+}
+
+.iCrdz:nth-child(2) i{
+    @apply text-[#5578ff];
+}
+
+.iCrdz:nth-child(3) i{
+    @apply text-[#e80368];
+}
+
+.iCrdz:nth-child(4) i{
+    @apply text-[#ffa76e];
+}
+
+.iCrdz:nth-child(5) i{
+    @apply text-[#11dace];
+}
+
+.iCrdz:nth-child(6) i{
+    @apply text-[#ff33cc];
+}
+
+.iCrdz:nth-child(7) i{
+    @apply text-[#b18f4f];
+}
+
+.iCrdz:hover{
+    @apply border-1 border-orangee ; 
+}
+
+.iCrdz:hover p{
+    @apply text-orangee duration-300;
+}
+
+/* RESUME ======================================================= */
+
+.rLine .graad{
+    @apply text-xl;
+}
+
+.rHead{
+    @apply font-extrabold text-2xl mt-4.5 mb-2.5;
+}
+
+.rLine{
+    @apply pl-[25px] relative flex flex-col gap-3.5 text-grayy;
+}
+
+.rBall{
+    @apply h-[16px] aspect-square absolute bg-orangee rounded-full top-[5px] left-[-7px];
+}
+
+.rLine::after{
+    @apply absolute content-[''] h-[calc(100%+15px)] w-[2px] bg-offGrayy top-5 left-0;
+}
+
+/* Exceptions ====================================================================*/
+.rSum > .rLine::after,
+.rEdu .rLine:last-child::after, 
+.acPjt .rLine:last-child::after
+{
+    height: calc(100% - 15px);
+}
+
+.rleft, .rright{
+    @apply min-w-[100%] large:min-w-[45%] large:max-w-[49%];
+}
+
+.rp li{
+    @apply min-h-8 flex gap-2 items-center pl-[20px];
+}
+
+.rp li i{
+    @apply flex justify-self-center self-center text-orangee;
+}
+
+.rCrdz{
+    @apply p-1.5 pl-3 pr-3 text-sm gap-3 bg-forCardz w-max text-grayy rounded-4xl font-extrabold shadow-[0px_0px_2px_rgba(255,251,235,0.8)];
+}
+
+.rLine:not(.rSum > .rLine){
+    @apply mt-5;
+}
+
+/* ================================= */
+.rpD{
+    @apply min-h-8 flex gap-2 pl-[20px] list-disc flex-col ;
+}
+
+.cCrd{
+    @apply h-20 bg-forCardz text-grayy min-w-[49%] rounded-2xl flex gap-4 items-center;
+}
+
+.cCrd i{
+    @apply text-2xl bg-forCardzHover text-orangee flex p-4 rounded-full ml-4;
+}
+
+.cCrd p:nth-child(1){
+    @apply font-extrabold text-xl;
+}
+
+.cCrd p:nth-child(2){
+    @apply text-sm;
+}
+
+/*  CONTACT FORM */
+.in{
+    @apply h-10 bg-forCardz p-3 rounded-sm text-sm outline-none;
+}
+
+.in:focus{
+    @apply border-1 border-orangee;
+}
+
+.in:nth-child(4){
+    @apply h-40 resize-none;
+}
+
+.sub{
+    @apply p-2 pl-5 pr-5 bg-orangee text-black;
+}
+
+/* ACTIVE NAV */
