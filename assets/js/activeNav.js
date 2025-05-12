@@ -8,13 +8,13 @@ function highlightNav() {
     const about = document.querySelector('.about');
     const resume = document.querySelector('.resume');
     const contact = document.querySelector('.contact');
+    const side = document.querySelector('.sidebar');
 
     // Loop through all nav links
     document.querySelectorAll(".nav-link").forEach(link => {
     if (link.getAttribute("href") === currentHash) {
         link.classList.add("text-orangee","under","duration-700");
 
-        
     } else {
         link.classList.add("text-[#999999]");
         link.classList.remove("text-orangee" ,"under");
@@ -37,6 +37,8 @@ function highlightNav() {
         heroAll.classList.remove('flex-col','h-[370px]','min-w-[90%]','justify-evenly');
         heroAll.classList.add('min-w-[80%]','justify-between','h-[70px]','items-center','bg-black','fixed','top-0');
         name.innerHTML = `<strong class="strongg text-extraOffWhite">Amitoshdeep Singh</strong>`;
+
+        side.classList.add('hidden');
     }
     else{
 
@@ -55,6 +57,8 @@ function highlightNav() {
         heroAll.classList.add('flex-col','h-[370px]','min-w-[90%]','justify-evenly');
         heroAll.classList.remove('min-w-[80%]','justify-between','h-[70px]','items-center','bg-black','fixed','top-0');
         name.innerHTML = `I'm <strong class="strongg text-extraOffWhite"> Amitoshdeep Singh</strong>`;
+
+        side.classList.add('hidden');
     }
 
     // FOR ABOUT SEC ==========================================
