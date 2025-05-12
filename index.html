@@ -734,9 +734,16 @@
                 
             </ul>
             
-            <ul class="fixed top-0 right-0 pr-10 pt-[25px] z-50 large:hidden">
-                <li id="navB" class="cursor-pointer"><img src="/assets/icons/menu.svg" alt=""  class=""></li>
-            </ul>
+            <div class="fixed top-0 right-0 pr-10 pt-[25px] z-50 large:hidden">
+                <!-- <li id="navB" class="cursor-pointer"><img src="/assets/icons/menu.svg" alt=""  class=""></li> -->
+               <div class="cursor-pointer relative w-5 h-3" id="navB">
+                    <span class="hamSpan h-0.5 w-full bg-orangee absolute top-0 transition-all duration-300 ease-in-out origin-center"></span>
+                    <span class="hamSpan h-0.5 w-full bg-orangee absolute top-1/2 transition-all duration-300 ease-in-out origin-center"></span>
+                    <span class="hamSpan h-0.5 w-full bg-orangee absolute top-full transition-all duration-300 ease-in-out origin-center"></span>
+                </div>
+
+
+            </div>
             
         </section>
 
