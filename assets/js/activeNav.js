@@ -39,7 +39,7 @@ function highlightNav() {
         name.innerHTML = `<strong class="strongg text-extraOffWhite">Amitoshdeep Singh</strong>`;
 
         side.classList.add('hidden');
-        scrollToTop();
+
     }
     else{
 
@@ -60,7 +60,7 @@ function highlightNav() {
         name.innerHTML = `I'm <strong class="strongg text-extraOffWhite"> Amitoshdeep Singh</strong>`;
 
         side.classList.add('hidden');
-        scrollToTop();
+
     }
 
     // FOR ABOUT SEC ==========================================
@@ -116,12 +116,6 @@ function highlightNav() {
 
 }
 
-function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // Optional: smooth scrolling
-    });
-}
 
 
 // Run on load
