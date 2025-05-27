@@ -5,6 +5,7 @@ function updateAge() {
     const ageInMs = now - birthDate;
     const ageInYears = ageInMs / (1000 * 60 * 60 * 24 * 365.25);
     document.getElementById("age").textContent = ageInYears.toFixed(9);
+    document.getElementById("age1").textContent = ageInYears.toFixed(1);
 }
 
 updateAge(); // Initial call
